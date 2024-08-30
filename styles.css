@@ -7,14 +7,28 @@ body, h1, p {
 /* General body styles */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000, #1a1a2e);
+    background: linear-gradient(-45deg, #000000, #1a1a2e, #11172c, #000000);
+    background-size: 400% 400%;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-attachment: fixed;
+    animation: gradient 15s ease infinite;
+}
+
+/* Background gradient animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Container styles */
@@ -45,25 +59,26 @@ p {
     gap: 20px;
 }
 
-.button {
-    text-decoration: none;
+button {
+    background-color: #3a3a5c;
     color: #ffffff;
-    background: #3a3a5c;
-    padding: 10px 20px;
+    border: none;
+    padding: 15px 30px;
     border-radius: 5px;
     font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
 }
 
-.button:hover {
+button:hover {
     background-color: #5c5c8a;
     transform: translateY(-3px);
 }
 
-.emoji {
+button .emoji {
     margin-right: 8px;
     font-size: 1.2rem;
 }
