@@ -1,121 +1,99 @@
-/* Reset default styles */
-body, h1, p, h2 {
-    margin: 0;
-    padding: 0;
-}
-
-/* General body styles */
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #000000, #1a1a2e, #11172c, #000000);
-    background-size: 400% 400%;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     margin: 0;
-    animation: gradient 15s ease infinite;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(120deg, #000428, #004e92);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
-/* Background gradient animation */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Container styles */
 .container {
     text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
 }
 
-/* Heading styles */
 h1 {
-    font-size: 4rem;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
-/* Paragraph styles */
 p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
-/* Button container and individual button styles */
+/* Button styles */
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
 }
 
-button {
-    background-color: #3a3a5c;
-    color: #ffffff;
-    border: 3px solid;
-    border-image-slice: 1;
-    border-width: 4px;
+.button {
+    display: inline-block;
     padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    border-image-source: linear-gradient(45deg, #ff6ec4, #7873f5, #24c6dc);
+    transition: all 0.3s ease;
+    border-image: linear-gradient(45deg, #f3ec78, #af4261, #f3ec78, #af4261) 1;
 }
 
-button:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
-}
-
-button:active {
-    transform: translateY(-2px) scale(1.02);
-}
-
-button .emoji {
-    margin-right: 8px;
-    font-size: 1.2rem;
+.button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Command box styles */
+.command-section {
+    margin-bottom: 30px;
+}
+
 .command-box {
-    background-color: rgba(58, 58, 92, 0.9);
-    border: 3px solid;
-    border-image-slice: 1;
-    border-width: 4px;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-    border-image-source: linear-gradient(45deg, #ff6ec4, #7873f5, #24c6dc);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #f3ec78, #af4261, #f3ec78, #af4261) 1;
+    transition: all 0.3s ease;
 }
 
 .command-box:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.command-box h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Back button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-image: linear-gradient(45deg, #f3ec78, #af4261, #f3ec78, #af4261) 1;
+    text-decoration: none;
 }
 
-.command-box p {
-    font-size: 1.1rem;
+.back-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Background gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
